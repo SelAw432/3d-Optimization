@@ -123,6 +123,7 @@ var ContextMenu = function(blueprint3d) {
     $("#item-width").val(cmToIn(selectedItem.getWidth()).toFixed(0));
     $("#item-height").val(cmToIn(selectedItem.getHeight()).toFixed(0));
     $("#item-depth").val(cmToIn(selectedItem.getDepth()).toFixed(0));
+    $("#item-position").append('<p> ' + [selectedItem.getPosition()] + '</p>');
 
     $("#context-menu").show();
 
@@ -205,7 +206,8 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
   var tabs = {
     "FLOORPLAN" : $("#floorplan_tab"),
     "SHOP" : $("#items_tab"),
-    "DESIGN" : $("#design_tab")
+    "DESIGN" : $("#design_tab"),
+    "ITEMS": $("#item_params")
   }
 
   var scope = this;
@@ -223,7 +225,13 @@ var SideMenu = function(blueprint3d, floorplanControls, modalEffects) {
     "SHOP" : {
       "div" : $("#add-items"),
       "tab" : tabs.SHOP
-    }
+    },
+    "ITEMS" : {
+      "div" : $("#item-present"),
+      "tab" : tabs.ITEMS
+    },
+
+
   }
 
   // sidebar state

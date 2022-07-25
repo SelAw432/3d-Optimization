@@ -14,6 +14,8 @@
     
     <script src="js/items.js"></script>
     <script src="js/example.js"></script>
+
+    <script src="js/itemsParam.js"></script>
   </head>
 
   <body>
@@ -35,6 +37,9 @@
             <li id="items_tab"><a href="#">
               Add Items
               <span class="glyphicon glyphicon-chevron-right pull-right"></span>
+            </a></li>
+            <li><a id="item_params" href="#">
+              Show Item Params
             </a></li>
           </ul>
           <hr />
@@ -76,6 +81,15 @@
                     </label>
                     <div class="col-sm-6">
                       <input type="number" class="form-control" id="item-height">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-5 control-label">
+                      Position 
+                    </label>
+                    <div class="col-sm-6" id="item-position">
+                      
+                      <!-- <input type="number" class="form-control" id="item-position"> -->
                     </div>
                   </div>
                 </div>
@@ -211,6 +225,14 @@
           <!-- Add Items -->
           <div id="add-items">
             <div class="row" id="items-wrapper">
+
+              <!-- Items added here by items.js -->
+            </div>
+          </div>
+
+          <!-- Items present in Viewer-->
+          <div id="items-present">
+            <div class="row" id="items-table">
 
               <!-- Items added here by items.js -->
             </div>
